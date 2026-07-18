@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Digest — for CTAIO readers</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Session Digest</h1>
+      <p class="sub">Paste a Claude Code / Cursor / Aider session transcript. Get a TL;DR, the decisions made, and the tools/commands actually used — no API key, no server, runs entirely in your browser.</p>
+    </header>
+
+    <textarea id="input" placeholder="Paste your agentic coding session transcript here..."></textarea>
+
+    <button id="digestBtn">Digest session</button>
+
+    <section id="output" class="output hidden">
+      <div class="card">
+        <h2>TL;DR</h2>
+        <p id="tldr"></p>
+      </div>
+      <div class="card">
+        <h2>Decisions made</h2>
+        <ul id="decisions"></ul>
+      </div>
+      <div class="card">
+        <h2>Tools & commands used</h2>
+        <ul id="tools"></ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built for ctaio.dev's agentic-coding audience. Deliberately zero-dependency: heuristic text parsing instead of an LLM call, so it works offline, costs nothing to run, and deploys as static files with no backend to maintain.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
